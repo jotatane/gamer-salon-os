@@ -1,5 +1,5 @@
 # Base Bazzite Nvidia Legacy (GTX 970)
-FROM ghcr.io/ublue-os/bazzite-deck-nvidia:470
+FROM ghcr.io/ublue-os/bazzite-deck-nvidia:stable-470
 
 # 1. Activation de Flathub et installation des outils Gaming
 RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && \
