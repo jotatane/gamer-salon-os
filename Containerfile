@@ -1,17 +1,15 @@
 # Base Bazzite Nvidia Legacy (GTX 970)
 FROM ghcr.io/ublue-os/bazzite-nvidia:latest
 
-# 1. Activation de Flathub et installation de la suite d'outils Gaming
+# 1. Activation de Flathub et installation des outils Gaming validés
 RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && \
     flatpak install -y flathub \
         com.heroicgameslauncher.hgl \
         net.lutris.Lutris \
-        net.davidrevoy.pvf \
-        net.davidrevoy.pvf \
         com.github.stunkymonkey.ProtonUp-Qt \
         org.freedesktop.Platform.VulkanLayer.MangoHud
 
-# 2. Pré-installation de EmuDeck
+# 2. Pré-installation du script EmuDeck (pour configurer tous tes émulateurs)
 RUN curl -sSL https://www.emudeck.com/EmuDeck.github.io/emudeck.sh -o /usr/bin/emudeck && \
     chmod +x /usr/bin/emudeck
 
